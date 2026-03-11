@@ -32,27 +32,38 @@ Any rational number is a valid Anthu program. Whether it does something meaningf
 
 ### Compile
 ```bash
+# Python
 python Anthu.py compile <source.txt> <output.ant>
 python Anthu.py compile <source.txt> <output.ant> -m 42
+
+# Executable
+Anthu compile <source.txt> <output.ant>
+Anthu compile <source.txt> <output.ant> -m 42
 ```
 The optional `-m` flag sets a secret multiplier for obfuscation.
 
 ### Run
 ```bash
-# From a .ant file
+# Python
 python Anthu.py run <program.ant>
-
-# Or directly with a fraction string
 python Anthu.py run 355/113
+
+# Executable
+Anthu run <program.ant>
+Anthu run 355/113
 ```
 
 ---
 
 ## Example
 
+`examples/hello_world.ant`
+```
+303925317914496322502205817564846275201535643467712157141261863065221806439921522627651854132782629734120/37414916402910410930299433882971637469796074612232507916253664330404280527103649726888433831254975014403
+```
+
 ```bash
-python Anthu.py compile examples/hello_world.txt examples/hello_world.ant
-python Anthu.py run examples/hello_world.ant
+Anthu run examples/hello_world.ant
 # Hello, World!
 ```
 
