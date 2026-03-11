@@ -1,3 +1,5 @@
+![Anthu](anthu_logo.png)
+
 # Anthu
 
 > A fraction is a program.
