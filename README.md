@@ -1,4 +1,6 @@
-![Anthu](anthu_logo.png)
+<p align="center">
+  <img src="anthu_logo.png" width="300"/>
+</p>
 
 # Anthu
 
