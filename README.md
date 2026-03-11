@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="anthu_logo.png" width="300"/>
+  <img src="anthu_logo.png" width="200"/>
 </p>
 
 # Anthu
