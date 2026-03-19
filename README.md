@@ -4,7 +4,7 @@
 
 # Anthu
 
-> A fraction is a program. Information decays through noise.
+> A fraction is a program.
 
 **Anthu** is an esoteric programming language where the entire source code is a single rational number. The interpreter decodes it via the Euclidean algorithm and executes an instruction set grounded in Shannon's information theory.
 
@@ -69,7 +69,7 @@ To produce correct output, you must **manage noise** — amplify signals and fil
 
 ### Noise-Driven Loops
 
-Loops exit when `signal ≤ noise` (channel capacity ≤ 1 bit). Instead of decrementing a counter to zero, you **inject noise until the signal drowns**:
+Loops exit when `signal ≤ noise` (channel capacity ≤ 1 bit). Instead of decrementing a counter to zero, you inject noise until the signal drowns:
 
 ```
 +10 [ !2 ]    # Loop runs 5 times: noise rises 0→2→4→6→8→10, exits at s=n
