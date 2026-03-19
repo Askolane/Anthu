@@ -394,7 +394,7 @@ def cmd_compile(args):
         print(f"Compiled → {output_path} ({len(commands)} commands)")
     else:
         # Output assembly
-        with open(output_path, 'w') as f:
+        with open(output_path, 'w', encoding='utf-8') as f:
             f.write(asm_text + '\n')
         print(f"Compiled → {output_path} ({len(commands)} commands)")
 
