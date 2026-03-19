@@ -1,4 +1,4 @@
-<img src="logo.png" width="200"/>
+<img src="anthu_logo.png" width="200"/>
 
 # Anthu
 
