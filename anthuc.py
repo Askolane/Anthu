@@ -356,7 +356,7 @@ def cmd_run(args):
         print("Error: specify source file", file=sys.stderr)
         return 1
 
-    with open(args[0]) as f:
+    with open(args[0], encoding='utf-8') as f:
         source = f.read()
 
     asm_text, commands, errors = compile_source(source)
@@ -377,7 +377,7 @@ def cmd_compile(args):
 
     source_path, output_path = args[0], args[1]
 
-    with open(source_path) as f:
+    with open(source_path, encoding='utf-8') as f:
         source = f.read()
 
     asm_text, commands, errors = compile_source(source)
@@ -389,7 +389,7 @@ def cmd_compile(args):
     if output_path.endswith('.ant'):
         # Compile to fraction
         frac = encode(commands)
-        with open(output_path, 'w') as f:
+        with open(output_path, 'w', encoding='utf-8') as f:
             f.write(f"{frac.numerator}/{frac.denominator}\n")
         print(f"Compiled → {output_path} ({len(commands)} commands)")
     else:
@@ -406,7 +406,7 @@ def cmd_debug(args):
         print("Error: specify source file", file=sys.stderr)
         return 1
 
-    with open(args[0]) as f:
+    with open(args[0], encoding='utf-8') as f:
         source = f.read()
 
     asm_text, commands, errors = compile_source(source)
