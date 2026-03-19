@@ -182,7 +182,7 @@ In Shannon's model, transmitting information through a noisy channel requires ma
 - Filtering is error correction
 - Measurement is observation (with uncertainty)
 
-The language is computationally equivalent to Brainfuck (both are Turing-complete), but the programming experience is fundamentally different. You don't manipulate values — you manage information.
+You don't manipulate values — you manage information.
 
 ---
 
