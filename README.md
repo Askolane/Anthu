@@ -1,3 +1,5 @@
+<img src="logo.png" width="200"/>
+
 # Anthu
 
 > A fraction is a program. Information decays through noise.
