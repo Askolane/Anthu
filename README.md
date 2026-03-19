@@ -186,6 +186,7 @@ In Shannon's model, transmitting information through a noisy channel requires ma
 - Filtering is error correction
 - Measurement is observation (with uncertainty)
 
+
 You don't manipulate values — you manage information.
 
 ---
@@ -277,4 +278,4 @@ MIT
 ## Acknowledgments
 
 Built with AI-assisted development (Claude, Anthropic).
-Language concept and information-theoretic design by the author; implementation developed collaboratively with AI.
+Language concept and information-theoretic design by the @Askolane; implementation developed collaboratively with AI.
