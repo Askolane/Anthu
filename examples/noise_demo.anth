@@ -1,0 +1,30 @@
+# Noise Demo — information decay in action
+#
+# Same signal (72 = 'H'), but noise degrades the output.
+# Output = min(signal, (signal+noise)//noise)
+#
+# (72,  0) → perfect     → 'H'
+# (72,  1) → barely lost  → 'H'
+# (72,  8) → degraded     → garbage
+# (72, 72) → destroyed    → garbage
+#
+# Then we filter all noise away and recover 'H'.
+
+channel sig
+
+signal sig = 72
+measure sig             // Clean: 'H'
+
+inject sig
+measure sig             // 1 noise: still 'H'
+
+inject sig * 7
+measure sig             // 8 noise: degraded
+
+inject sig * 64
+measure sig             // 72 noise: destroyed
+
+filter sig * 72
+measure sig             // Filtered: 'H' restored
+
+emit "\n"

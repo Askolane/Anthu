@@ -1,0 +1,25 @@
+# Loop Demo — noise-driven termination
+#
+# In Anthu, loops exit when signal <= noise (channel capacity <= 1 bit).
+# Instead of decrementing a counter to zero, we inject noise
+# until the signal drowns.
+#
+# Counter starts at signal=10. Each iteration injects 2 noise.
+# Loop exits when noise reaches 10 (= signal). That's 5 iterations.
+
+channel counter
+channel output
+
+signal counter = 10
+
+while counter {
+    inject counter * 2
+    amplify output
+}
+
+// output signal = 5 (one per iteration)
+// Add ASCII '0' offset (48) to display as digit: 5 + 48 = 53 = '5'
+amplify output * 48
+measure output
+
+emit "\n"
