@@ -349,7 +349,7 @@ def cmd_run(args):
     target = [a for a in args if a != '--debug'][0]
 
     if target.endswith('.ant'):
-        with open(target) as f:
+        with open(target, encoding='utf-8') as f:
             content = f.read().strip()
         p, q = parse_fraction(content)
     else:
@@ -374,7 +374,7 @@ def cmd_asm(args):
     debug = '--debug' in args
     source = [a for a in args if a != '--debug'][0]
 
-    with open(source) as f:
+    with open(source, encoding='utf-8') as f:
         text = f.read()
 
     commands = assemble(text)
@@ -394,13 +394,13 @@ def cmd_compile(args):
 
     source, output = args[0], args[1]
 
-    with open(source) as f:
+    with open(source, encoding='utf-8') as f:
         text = f.read()
 
     commands = assemble(text)
     frac = encode(commands)
 
-    with open(output, 'w') as f:
+    with open(output, 'w', encoding='utf-8') as f:
         f.write(f"{frac.numerator}/{frac.denominator}\n")
 
     print(f"Compiled {len(commands)} commands → {output}")
