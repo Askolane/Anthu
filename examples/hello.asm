@@ -1,0 +1,17 @@
+# Hello, World! in Anthu v2
+# Each cell holds (signal, noise). Clean signal → faithful output.
+
++72 .           # H
+> +101 .        # e
+> +108 .        # l
+> +108 .        # l
+> +111 .        # o
+> +44 .         # ,
+> +32 .         # (space)
+> +87 .         # W
+> +111 .        # o
+> +114 .        # r
+> +108 .        # l
+> +100 .        # d
+> +33 .         # !
+> +10 .         # newline
