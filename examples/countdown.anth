@@ -1,0 +1,25 @@
+# Countdown — noise-driven loop termination
+#
+# A counter channel loops until noise drowns the signal.
+# Each iteration, we inject noise and print a digit.
+
+channel counter
+channel digit
+
+signal counter = 5
+
+// Loop: runs while counter's signal > noise
+while counter {
+    // Copy counter value to digit for display
+    // (simplified: we build digit manually)
+    
+    // Inject noise to approach termination
+    inject counter * 1
+    
+    // Show a dot for each iteration
+    signal digit = 46    // '.'
+    measure digit
+    attenuate digit * 46 // reset digit
+}
+
+emit "\ndone\n"

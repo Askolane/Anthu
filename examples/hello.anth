@@ -1,0 +1,4 @@
+# Hello, World! in Anthu high-level syntax
+# Each channel is a cell holding (signal, noise).
+
+emit "Hello, World!\n"

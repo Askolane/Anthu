@@ -1,0 +1,26 @@
+# Echo — read a character, display it with decreasing fidelity
+#
+# Demonstrates: listen, measure, inject, filter
+# Input a character, then watch it decay as noise accumulates.
+
+channel input
+channel display
+
+// Read one character
+listen input
+
+// Copy to display channel for manipulation
+copy input -> display
+
+// Output 1: clean
+measure display
+
+// Output 2: slightly noisy
+inject display * 3
+measure display
+
+// Output 3: filtered back
+filter display * 3
+measure display
+
+emit "\n"

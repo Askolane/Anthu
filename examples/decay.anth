@@ -1,0 +1,20 @@
+# Noise Decay — watch information degrade
+#
+# Set up a clean signal, then progressively inject noise.
+# Each measurement shows the output getting worse.
+
+channel sig
+
+# Clean signal: 'H' (72)
+signal sig = 72
+measure sig          // outputs 'H'
+
+# Inject 8 noise: output degrades
+inject sig * 8
+measure sig          // degraded
+
+# Filter it back: restore fidelity
+filter sig * 8
+measure sig          // 'H' again — error correction works!
+
+emit "\n"
